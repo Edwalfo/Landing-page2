@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap')
+@import 'reset'
+$transparente: rgba(23, 81, 227, 0.2)
+$pad-space: 20px
+$azul-oscuro: #250e70
+$link: #E2F4FB
+
+body
+    background: white
+    font-size: 18px
+    display: grid
+    min-height: 100vh
+    grid-template-rows: auto 1fr auto
+a
+    color: $link
+    font-weight: bold
+    text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px -1px 5px black
+header
+    font-family: 'ABeeZee', sans-serif
+    background: url('../img/fondo.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+    nav
+        display: grid
+        grid-template-columns: 240px 1fr
+        background: rgba(255,255,255,0.9 )
+        padding: 5px $pad-space
+        ul
+            display: inline-flex
+            align-items: center
+            justify-content: flex-end
+            li
+                margin-right: $pad-space
+    section
+        background: $transparente
+        display: grid
+        grid-template-columns: 1fr 300px
+        padding: 50px $pad-space
+        column-gap: 80px
+
+        blockquote
+            grid-template-columns: 1fr 300px
+            color: white
+            text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px -1px 5px black
+            font-size: 1.1em
+            padding: $pad-space
+
+        form
+            background: rgba(0,0,0,0.5 )
+            padding: $pad-space
+            padding-top: 60px
+            input, button, h3,textarea
+                margin-bottom: $pad-space
+            input,textarea
+                padding: 5px
+                width: calc(100% - 14px)
+                border: 0
+            textarea
+                resize: none
+            button
+                background: #0094C9
+                width: 100%
+                font-size: 0.9em
+                border: none
+                padding: 5px
+                color: white
+            h3
+                color: $link
+                text-align: center
+#titulos
+    color: #250E70
+    font-size: 2em
+    text-shadow: 1px 1px 1px white, 1px 1px 5px white, 1px -1px 5px white
+#article-stackholder
+    background: #250E70
+    font-size: 2em
+    text-align: center
+    padding: 30px $pad-space 60px $pad-space
+    color: $link
+    font-weight: bold
+    text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px -1px 5px black
+    border-bottom: 1px solid white
+#article-ventajas
+    background: rgb(37,14,112)
+    font-size: 2em
+    text-align: center
+    padding: 30px $pad-space 60px $pad-space
+    color: $link
+    font-weight: bold
+    text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px -1px 5px black
+
+main
+    font-family: 'ABeeZee', sans-serif
+    section
+        display: grid
+        grid-template-columns: 600px 1fr
+        border-bottom: 1px solid $azul-oscuro
+
+        article
+            padding: 50px
+            ul
+                list-style-type: square
+                justify-content: flex-end
+                color: rgb(37,14,112)
+
+                li
+                    font-size: 1.2em
+                    padding: 10px
+                    margin-right: $pad-space
+footer
+
+    font-family: 'ABeeZee', sans-serif
+    background: rgb(0, 0, 0)
+    padding: 20px $pad-space 40px $pad-space
+    text-align: center
+
+    section
+
+        border-bottom: 1px solid white
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 50px
+        padding: 45px 0px
+
+        article
+            img
+                height: 50px
+                width: 50px
+                background: rgba(255, 255, 255,0.8)
+
+            h2
+                padding: 10px
+                font-size: 1.1em
+                color: $link
+
+#text-p
+    font-size: 0.8em
+    color: white
+
+#container-copy
+    display: inline-block
+    padding: 10px
+    color: white
+    text-align: right
+    border-bottom: none
+
+@media screen and (max-width: 600px)
+    body
+
+    header
+        nav
+            grid-template-columns: 30px 1fr
+            padding: 1px $pad-space
+            #logo-1
+                display: none
+        section
+            grid-template-columns: none
+
+    main
+        section
+            grid-template-columns: none
+    footer
+        section
+            grid-template-columns: none
+
+    #article-stackholder
+        border: none
+@media screen and (min-width: 600px)
+    body
+
+    header
+        nav
+            grid-template-columns: 30px 1fr
+            padding: 1px $pad-space
+            #logo-2
+                display: none
